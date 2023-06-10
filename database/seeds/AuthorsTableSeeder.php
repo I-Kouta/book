@@ -11,6 +11,12 @@ class AuthorsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('authors')->insert([
+            ['name' => 'Atlas一郎'],
+            ['name' => 'Atlas二郎'],
+            ['name' => 'Atlas三郎'],
+            ['name' => 'Atlas四郎'],
+            ['name' => 'Atlas五郎']
+        ]);
     }
 }
