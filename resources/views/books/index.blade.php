@@ -28,7 +28,7 @@
             <tr>
                 <td>{{ $book->id }}</td>
                 <td>{{ $book->title }}</td>
-                <td>著者名については後ほど解説</td>
+                <td>{{ $book->author->name }}</td>
                 <td>{{ $book->price }}</td>
                 <td>{{ $book->created_at }}</td>
             </tr>
