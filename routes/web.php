@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/hello', function () {
+//     echo "hello world!";
+// });
+
+Route::get("/hello", "BooksController@hello");
