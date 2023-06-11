@@ -20,3 +20,4 @@ Route::get('/', function () {
 // });
 
 Route::get("/hello", "BooksController@hello");
+Route::get("/index", "BooksController@index");
