@@ -22,4 +22,9 @@ class BooksController extends Controller
         $authors = Author::get();
         return view("books.createForm", compact("authors"));
     }
+
+    public function bookCreate(Request $request){
+        dd($request);
+        return redirect("/index");
+    }
 }
