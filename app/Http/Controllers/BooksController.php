@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Author;
 
 class BooksController extends Controller
 {
@@ -18,6 +19,7 @@ class BooksController extends Controller
     }
 
     public function createForm(){
-        return view("books.createForm");
+        $authors = Author::get();
+        return view("books.createForm", compact("authors"));
     }
 }
