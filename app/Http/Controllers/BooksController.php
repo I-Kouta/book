@@ -24,7 +24,15 @@ class BooksController extends Controller
     }
 
     public function bookCreate(Request $request){
-        dd($request);
+        // dd($request);
+        $author_id = $request->input("author_id");
+        $title = $request->input("title");
+        $price = $request->input("price");
+        Book::create([
+            'author_id' => $author_id,
+            'title' => $title,
+            'price' => $price
+        ]);
         return redirect("/index");
     }
 }
