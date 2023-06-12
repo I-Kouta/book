@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get("/hello", "BooksController@hello");
 Route::get("/index", "BooksController@index");
+Route::get("/create-form", "BooksController@createForm");
