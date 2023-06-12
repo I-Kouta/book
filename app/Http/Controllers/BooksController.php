@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Book;
 use App\Author;
+use App\Http\Requests\BookCreateFormRequest;
 
 class BooksController extends Controller
 {
@@ -23,7 +24,7 @@ class BooksController extends Controller
         return view("books.createForm", compact("authors"));
     }
 
-    public function bookCreate(Request $request){
+    public function bookCreate(BookCreateFormRequest $request){
         // dd($request);
         $request->validate([
             "author_id" => "required|exists:authors,id",
