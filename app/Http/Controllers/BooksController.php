@@ -26,11 +26,6 @@ class BooksController extends Controller
 
     public function bookCreate(BookCreateFormRequest $request){
         // dd($request);
-        $request->validate([
-            "author_id" => "required|exists:authors,id",
-            "title" => "required|max:100",
-            "price" => "required"
-        ]);
         $author_id = $request->input("author_id");
         $title = $request->input("title");
         $price = $request->input("price");

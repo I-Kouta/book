@@ -38,15 +38,15 @@
         <form action="/book/create" method="post">
           @csrf
           <select class="form-select" aria-label="Default select example" name="author_id">
-            <option value="">著者を選択してください。</option>
+            <option value="0">著者を選択してください。</option>
             @foreach($authors as $author)
             <option value="{{ $author->id }}">
               {{ $author->name }}
             </option>
             @endforeach
           </select>
-          <input type="text" name="title" value="" class="form-control" placeholder="本のタイトル" required>
-          <input type="text" name="price" value="" class="form-control" placeholder="本の金額" required>
+          <input type="text" name="title" value="" class="form-control" placeholder="本のタイトル">
+          <input type="text" name="price" value="" class="form-control" placeholder="本の金額">
           <button type="submit" class="btn btn-success pull-right">追加</button>
         </form>
       </div>
