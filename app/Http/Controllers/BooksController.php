@@ -36,4 +36,7 @@ class BooksController extends Controller
         ]);
         return redirect("/index");
     }
+
+    public function updateForm($id){
+    }
 }

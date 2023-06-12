@@ -24,6 +24,7 @@
                 <th>著者名</th>
                 <th>金額</th>
                 <th>登録日時</th>
+                <th></th>
             </tr>
             @foreach ($books as $book)
             <tr>
@@ -32,6 +33,7 @@
                 <td>{{ $book->author->name }}</td>
                 <td>{{ $book->price }}</td>
                 <td>{{ $book->created_at }}</td>
+                <td><a class="btn btn-primary" href="/book/{{$book->id}}/update-form">更新</a></td>
             </tr>
             @endforeach
         </table>
