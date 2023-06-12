@@ -13,6 +13,15 @@
     <header>
         <a href="/index"><h1 class="page-header">Laravelを使ったCRUD機能の実装</h1></a>
     </header>
+    @if($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
     <div class="container">
         <h2 class="page-header">著者を登録する</h2>
         {!! Form::open(['url' => '/author/create']) !!}
