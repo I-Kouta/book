@@ -52,4 +52,9 @@ class BooksController extends Controller
         ]);
         return redirect("/index");
     }
+
+    public function delete($id){
+        Book::where("id", $id)->delete();
+        return redirect("/index");
+    }
 }

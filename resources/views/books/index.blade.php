@@ -25,6 +25,7 @@
                 <th>金額</th>
                 <th>登録日時</th>
                 <th></th>
+                <th></th>
             </tr>
             @foreach ($books as $book)
             <tr>
@@ -34,6 +35,7 @@
                 <td>{{ $book->price }}</td>
                 <td>{{ $book->created_at }}</td>
                 <td><a class="btn btn-primary" href="/book/{{$book->id}}/update-form">更新</a></td>
+                <td><a class="btn btn-danger" href="/book/{{$book->id}}/delete" onclick="return confirm('こちらの本を削除してもよろしいでしょうか？')">削除</a></td>
             </tr>
             @endforeach
         </table>
