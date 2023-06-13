@@ -15,6 +15,11 @@
     </header>
 
     <div class="container">
+        <form action="/search" method="post">
+            @csrf
+            <input type="text" name="keyword" class="form" placeholder="タイトルで検索">
+            <button type="submit" class="btn btn-success">検索</button>
+        </form>
         <p class="pull-right"><a class="btn btn-success" href="/create-form">登録する</a></p>
         <h2 class="page-header">本のリスト一覧</h2>
         <table class='table table-hover'>
