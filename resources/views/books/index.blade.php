@@ -21,7 +21,7 @@
             <th></th>
             <th></th>
         </tr>
-        @foreach ($books as $book)
+        @foreach($books as $book)
         <tr>
             <td>{{ $book->id }}</td>
             <td>{{ $book->title }}</td>

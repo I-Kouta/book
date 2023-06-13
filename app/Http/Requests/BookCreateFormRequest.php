@@ -26,7 +26,7 @@ class BookCreateFormRequest extends FormRequest
         return [
             "author_id" => "required|exists:authors,id",
             "title" => "required|max:50",
-            "price" => "required|digits:3,6" # 3桁~6桁でないとダメ
+            "price" => "required|digits_between:3,6" # 3桁~6桁でないとダメ
         ];
     }
 
@@ -38,7 +38,7 @@ class BookCreateFormRequest extends FormRequest
             "title.required" => "本のタイトルを入力してください",
             "title.max" => "50文字以内で入力してください",
             "price.required" => "金額を入力してください",
-            "price.digits" => "100円未満または10万円を超える金額は登録できません"
+            "price.digits_between" => "100円未満または100万円を超える金額は登録できません"
         ];
     }
 }
