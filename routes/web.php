@@ -27,3 +27,4 @@ Route::post("/book/create", "BooksController@bookCreate"); # 画面遷移ナシ
 Route::get("/book/{id}/update-form", "BooksController@updateForm");
 Route::post("/book/update", "BooksController@update"); # 画面遷移ナシ
 Route::get("/book/{id}/delete", "BooksController@delete");
+Route::post("/search", "BooksController@search");
