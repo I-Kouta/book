@@ -38,5 +38,7 @@ class BooksController extends Controller
     }
 
     public function updateForm($id){
+        $books = Book::where("id", $id)->first();
+        return view("books.updateForm", compact("books"));
     }
 }
