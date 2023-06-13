@@ -48,7 +48,7 @@ class BooksController extends Controller
         $upPrice = $request->input("upPrice");
         $request->validate([
             "upTitle" => "required|max:50",
-            "upPrice" => "required|digits_between:3,6"
+            "upPrice" => "required|digits_between:3,6||regex:/^[ -~｡-ﾟ]*$/u"
         ]);
         Book::where("id", $id)->update([
             'title' => $upTitle,
