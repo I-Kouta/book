@@ -66,6 +66,6 @@ class BooksController extends Controller
         }else{
             $books = Book::all();
         }
-        return view('books.index', compact("books"));
+        return view('books.index', compact("books", "keyword"));
     }
 }

@@ -19,6 +19,9 @@
             @csrf
             <input type="text" name="keyword" class="form" placeholder="タイトルで検索">
             <button type="submit" class="btn btn-success">検索</button>
+            @if(!empty($keyword))
+            <div>検索ワード：{{ $keyword }}</div>
+            @endif
         </form>
         <p class="pull-right"><a class="btn btn-success" href="/create-form">登録する</a></p>
         <h2 class="page-header">本のリスト一覧</h2>
