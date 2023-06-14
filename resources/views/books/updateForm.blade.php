@@ -15,9 +15,9 @@
     <div class="form-group">
         {{ Form::hidden('id', $books->id) }}
         {{ Form::label('本のタイトル') }}
-        {{ Form::input('text', 'upTitle', $books->title, ['required', 'class' => 'form-control']) }}
+        {{ Form::input('text', 'upTitle', $books->title, ['class' => 'form-control']) }}
         {{ Form::label('本の金額') }}
-        {{ Form::input('text', 'upPrice', $books->price, ['required', 'class' => 'form-control']) }}
+        {{ Form::input('text', 'upPrice', $books->price, ['class' => 'form-control']) }}
     </div>
     <button type="submit" class="btn btn-primary pull-right">更新</button>
     {!! Form::close() !!}
