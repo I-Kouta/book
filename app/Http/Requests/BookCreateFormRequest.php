@@ -38,7 +38,7 @@ class BookCreateFormRequest extends FormRequest
             "title.required" => "本のタイトルを入力してください",
             "title.max" => "50文字以内で入力してください",
             "price.required" => "金額を入力してください",
-            "price.digits_between" => "100円未満または100万円を超える金額は登録できません",
+            "price.digits_between" => "100円未満または100万円以上の金額は登録できません",
             "price.regex" => "全角の値は登録できません"
         ];
     }
